@@ -74,7 +74,9 @@ class _UserPlaylistScreenState extends State<UserPlaylistScreen> {
                             child: Text(
                               "Add Some Songs!",
                               style: TextStyle(
-                                  fontFamily: 'Poppins', fontSize: 25),
+                                  fontFamily: 'Poppins', fontSize: 25,
+                                  color: Colors.white,
+                                  ),
                             ),
                           ),
                         )
@@ -144,6 +146,7 @@ class _UserPlaylistScreenState extends State<UserPlaylistScreen> {
                                       playlistSongs.removeAt(index);
                                       box.put(
                                           widget.PlaylistName, playlistSongs);
+                                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Playlist Removed')));
                                     });
                                   }
                                 },

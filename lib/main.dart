@@ -47,14 +47,12 @@ class _MyAppState extends State<MyApp> {
     super.initState();
     fetchSongs();
   }
-
   List<SongModel> allsong = [];
   fetchSongs() async {
     bool permissionStatus = await _audioQuery.permissionsStatus();
     if (!permissionStatus) {
       await _audioQuery.permissionsRequest();
     }
-
     allsong = await _audioQuery.querySongs();
     mappedSongs = allsong
         .map((e) => MusicSongs(
@@ -66,7 +64,7 @@ class _MyAppState extends State<MyApp> {
         .toList();
     await box.put('musics', mappedSongs);
     dbSongs = box.get('musics') as List<MusicSongs>;
-
+    
     dbSongs.forEach((element) {
       audiosongs.add(
         Audio.file(

@@ -6,7 +6,6 @@ import 'package:on_audio_query/on_audio_query.dart';
 import 'package:rhythm_beatz_bloc/database/songmodel_adaptor.dart';
 import 'package:rhythm_beatz_bloc/presentation/Screens/now_playing/widgets/bottomsheet_widget.dart';
 import 'package:rhythm_beatz_bloc/presentation/Screens/now_playing/widgets/create_playlist_card.dart';
-
 import '../../../logics/add_button/add_button_bloc.dart';
 
 class ScreenPlaying extends StatefulWidget {
@@ -130,24 +129,32 @@ class _ScreenPlayingState extends State<ScreenPlaying> {
                     //),
                   ),
                   SizedBox(height: mediaQuery.size.height * 0.05),
-                  Text(
-                    myaudio.metas.title!,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      fontFamily: 'assets/fonts/Inter-Bold.ttf',
-                      color: Color(0xffD9D8E0),
-                      fontSize: 23,
-                      fontWeight: FontWeight.bold,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 7,right: 7),
+                    child: Text(
+                      myaudio.metas.title!,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        fontFamily: 'assets/fonts/Inter-Bold.ttf',
+                        color: Color(0xffD9D8E0),
+                        fontSize: 23,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                   SizedBox(height: mediaQuery.size.height * 0.01),
-                  Text(
-                    myaudio.metas.artist!,
-                    style: const TextStyle(
-                      color: Color(0xff5C5884),
-                      fontFamily: 'assets/fonts/Roboto-Light.ttf',
-                      fontSize: 20,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 7,right: 7),
+                    child: Text(
+                      myaudio.metas.artist!,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: Color(0xff5C5884),
+                        fontFamily: 'assets/fonts/Roboto-Light.ttf',
+                        fontSize: 20,
+                      ),
                     ),
                   ),
                   IconButton(

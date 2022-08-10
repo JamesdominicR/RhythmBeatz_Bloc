@@ -1,20 +1,21 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:lottie/lottie.dart';
 import 'package:rhythm_beatz_bloc/presentation/Screens/widgets/bottom_navigation.dart';
-
 class AnimatedsplashScreen extends StatelessWidget {
   List<Audio> audioSongs;
   AnimatedsplashScreen({Key? key, required this.audioSongs}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    var mediaQuery = MediaQuery.of(context);
     return AnimatedSplashScreen(
       backgroundColor: const Color(0xffD9D8E0),
-      duration: 3000,
+      duration: 4000,
       splash: Padding(
-        padding: EdgeInsets.symmetric(vertical: 120),
+        padding: const EdgeInsets.all(8.0),
         child: Column(children: [
-          Image.asset('assets/Images/splashscreenIcon.png'),
+         Lottie.asset('assets/lottie_splash/81966-girl-listening-to-music.json'),
           RichText(
             text: const TextSpan(
               children: [
@@ -61,10 +62,10 @@ class AnimatedsplashScreen extends StatelessWidget {
         ]),
       ),
       splashIconSize: double.infinity,
-      nextScreen: BottomNavigationWidget(
-        allsong: audioSongs,
-      ),
-      splashTransition: SplashTransition.fadeTransition,
+     nextScreen: BottomNavigationWidget(
+       allsong: audioSongs,
+     ),
+     splashTransition: SplashTransition.fadeTransition,
     );
   }
 }

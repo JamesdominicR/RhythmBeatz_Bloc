@@ -48,7 +48,7 @@ class _SongsheetWidgetState extends State<SongsheetWidget> {
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
                     image: DecorationImage(
-                      image: AssetImage("assets/Images/Image 4.jpg"),
+                      image: AssetImage("assets/Images/musicdefaultIcon.jpg"),
                       fit: BoxFit.cover,
                     ),
                   ),

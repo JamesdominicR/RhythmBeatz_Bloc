@@ -89,7 +89,7 @@ class BottomsheetWidget extends StatelessWidget {
                         width: 50,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage("assets/Images/Image 4.jpg"),
+                              image: AssetImage("assets/Images/musicdefaultIcon.jpg"),
                               fit: BoxFit.cover),
                           borderRadius: BorderRadius.all(Radius.circular(14)),
                         ),

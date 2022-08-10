@@ -204,7 +204,6 @@ class _LibraryPlaylistWidgetState extends State<LibraryPlaylistWidget> {
                                                       )
                                                     ]),
                                               ));
-
                                       // Navigator.of(context).pop();
                                       // ScaffoldMessenger.of(context)
                                       //     .showSnackBar(
@@ -212,7 +211,6 @@ class _LibraryPlaylistWidgetState extends State<LibraryPlaylistWidget> {
                                       //     content: Text('Playlist Removed'),
                                       //   ),
                                       // );
-
                                     }
                                     if (value == "1") {
                                       showDialog(
