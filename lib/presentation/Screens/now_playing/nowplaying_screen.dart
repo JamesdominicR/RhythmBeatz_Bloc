@@ -29,7 +29,6 @@ class _ScreenPlayingState extends State<ScreenPlaying> {
   Audio find(List<Audio> source, String fromPath) {
     return source.firstWhere((element) => element.path == fromPath);
   }
-
   final box = MusicBox.getInstance();
   List<MusicSongs> dbSongs = [];
   List<dynamic>? likedSongs = [];

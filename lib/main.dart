@@ -7,7 +7,6 @@ import 'database/songmodel_adaptor.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 import 'logics/search/search_bloc.dart';
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
